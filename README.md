@@ -56,3 +56,31 @@ curl --location 'http://localhost:8080/nodes' \
   "parentId": "7e1dcfdd-44c8-40f3-8177-d9306d3789c7"
 }'
 ```
+
+### Obtener información de un Nodo
+
+```bash
+GET /nodes/{id}
+```
+Este endpoint permite obtener la información de un Nodo y toda su descendencia.
+
+#### Ejemplo de solicitud:
+
+```bash
+curl --location 'http://localhost:8080/nodes/2e89f82f-ff8f-42b6-b631-bafa40d58bac' \
+--header 'Accept: */*'
+```
+
+### Eliminar un Nodo
+
+```bash
+DELETE /nodes/{id}
+```
+Este endpoint permite eliminar un Nodo y todos sus descendientes..
+
+#### Ejemplo de solicitud:
+
+```bash
+curl --location --request DELETE 'http://localhost:8080/nodes/2e89f82f-ff8f-42b6-b631-bafa40d58bac' \
+--header 'Accept: */*'
+```
