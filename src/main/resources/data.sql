@@ -1,0 +1,1 @@
+INSERT INTO node (id, name, parent_id) VALUES ('root', 'root', 'root');
