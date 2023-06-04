@@ -23,8 +23,6 @@ import cl.gob.scj.pruebanodos.model.Node;
 @Service
 public class NodeServiceImpl implements NodeService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(NodeServiceImpl.class);
-
     @Autowired
     NodeRepository nodeRepository;
 
@@ -82,7 +80,7 @@ public class NodeServiceImpl implements NodeService {
         nodeDTO.setId(node.getId());
         nodeDTO.setName(node.getName());
         nodeDTO.setParentId(node.getParent().getId());
-        nodeDTO.setChildrens(copyChildren(node.getChildrens())); // Copia la lista de hijos recursivamente
+        nodeDTO.setChildrens(copyChildren(node.getChildrens()));
         return nodeDTO;
     }
     
@@ -90,7 +88,7 @@ public class NodeServiceImpl implements NodeService {
         List<NodeDTO> childrenDTO = new ArrayList<>();
         for (Node child : children) {
             if (!child.getId().equals(idNodoRaiz)) {
-                NodeDTO childDTO = copyFromNodeToNodeDTO(child); // Copia cada hijo llamando al método principal
+                NodeDTO childDTO = copyFromNodeToNodeDTO(child);
                 childrenDTO.add(childDTO);
             }
         }

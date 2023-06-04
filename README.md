@@ -33,6 +33,10 @@ Este proyecto implementa una API de un pequeño gestor documental utilizando el 
     mvn spring-boot:run
      ```
 
+## Documentación de la API
+
+La documentación de la API está disponible en `http://localhost:8080/swagger-ui.html`, donde encontrarás una interfaz interactiva que describe los diferentes endpoints, parámetros de entrada y salidas esperadas.
+
 ## Endpoints
 
 A continuación se describen los endpoints disponibles en la API del gestor documental.
